@@ -1,9 +1,11 @@
+
+
 function ImageGallery({ images }) {
   return (
-    <div>
-      <ul>
+    <div className="ImageGallery">
+      <ul className="ImageGalleryItem">
         {images.map((image, index) => (
-          <li key={index}>
+          <li className="ImageGalleryItem-image" key={index}>
             <img src={image.previewURL} alt={image.tags} />
           </li>
         ))}
