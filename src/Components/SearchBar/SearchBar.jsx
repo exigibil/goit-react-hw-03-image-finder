@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { SlMagnifier } from 'react-icons/sl';
-import styles from './searchBar.module.css';
+import { useState } from "react";
+import { SlMagnifier } from "react-icons/sl";
+import styles from "./searchBar.module.css";
 
 function SearchBar({ onSearch }) {
-  const [searchItem, setSearchItem] = useState('');
+  const [searchItem, setSearchItem] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();

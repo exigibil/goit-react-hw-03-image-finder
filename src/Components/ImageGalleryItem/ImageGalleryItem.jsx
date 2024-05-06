@@ -1,5 +1,3 @@
-
-
 function ImageGallery({ images }) {
   return (
     <div>
