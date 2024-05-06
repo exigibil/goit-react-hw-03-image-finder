@@ -1,19 +1,19 @@
-import React from 'react';
 import './App.css';
+import SearchBar from '../src/Components/SearchBar/SearchBar';
 
 function App() {
-  
-
   return (
     <>
-      <div className='appContainer'>
-        
-        <h1>Nimic</h1>
+      <SearchBar />
 
+      <div className='appContainer'>
+        <h1>Nimic</h1>
       </div>
-      
     </>
   )
 }
 
 export default App
+
+
+
