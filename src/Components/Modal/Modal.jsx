@@ -17,7 +17,6 @@ function Modal({ imageUrl, onClose }) {
   return (
     <div className={styles.overlay} onClick={closeModal}>
         <div className={styles.imgContainer} onClick={closeModal}>
-        <button className={styles.closeButton} onClick={closeModal}>&times;</button>
         <img src={imageUrl} onClick={openModal} alt="Click to open" />
         </div>
        
