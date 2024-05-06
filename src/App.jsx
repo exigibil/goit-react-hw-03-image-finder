@@ -1,7 +1,8 @@
 import { useState } from "react";
 import SearchBar from "../src/Components/SearchBar/SearchBar";
-import ImageGallery from "../src/Components/ImageGalleryItem/ImageGalleryItem";
-import getImages from "../src/Components/ImageGallery/getImages";
+import getImages from "../src/Components/GetImgAPI/getImages";
+
+import ImageGallery from "./Components/ImageGallery/ImageGallery";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -18,6 +19,7 @@ function App() {
   return (
     <div>
       <SearchBar onSearch={handleSearch} />
+      
       <ImageGallery images={images} />
     </div>
   );
