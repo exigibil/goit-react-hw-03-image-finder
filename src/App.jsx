@@ -1,7 +1,6 @@
 import { useState } from "react";
 import SearchBar from "../src/Components/SearchBar/SearchBar";
 import getImages from "../src/Components/GetImgAPI/getImages";
-
 import ImageGallery from "./Components/ImageGallery/ImageGallery";
 
 function App() {

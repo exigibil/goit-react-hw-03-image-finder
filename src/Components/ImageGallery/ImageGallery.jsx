@@ -1,4 +1,4 @@
-import styles from "./ImageGallery.module.css";
+import styles from './ImageGallery.module.css';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 
 function ImageGallery({ images }) {

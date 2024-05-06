@@ -4,7 +4,6 @@ import styles from "./searchBar.module.css";
 
 function SearchBar({ onSearch }) {
   const [searchItem, setSearchItem] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(searchItem);
