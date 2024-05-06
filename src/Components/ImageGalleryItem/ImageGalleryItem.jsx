@@ -1,12 +1,16 @@
-
+import styles from "./ImageGalleryItem.module.css";
 
 function ImageGallery({ images }) {
   return (
-    <div className="ImageGallery">
-      <ul className="ImageGalleryItem">
+    <div className={styles.imageGalleryContainer}>
+      <ul className={styles.imageGallery}>
         {images.map((image, index) => (
-          <li className="ImageGalleryItem-image" key={index}>
-            <img src={image.previewURL} alt={image.tags} />
+          <li className={styles.imageGalleryItem} key={index}>
+            <img
+              className={styles.imageGalleryImg}
+              src={image.previewURL}
+              alt={image.tags}
+            />
           </li>
         ))}
       </ul>

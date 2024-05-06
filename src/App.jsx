@@ -1,5 +1,4 @@
 import { useState } from "react";
-import axios from "axios";
 import SearchBar from "../src/Components/SearchBar/SearchBar";
 import ImageGallery from "../src/Components/ImageGalleryItem/ImageGalleryItem";
 import getImages from "../src/Components/ImageGallery/getImages";
