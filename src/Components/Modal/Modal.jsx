@@ -1,10 +1,10 @@
-import React from 'react';
-import basicLightbox from 'basiclightbox';
-import styles from '../Modal/Modal.module.css';
+import basicLightbox from "basiclightbox";
+import styles from "../Modal/Modal.module.css";
+import PropTypes from "prop-types";
 
 function Modal({ imageUrl, onClose }) {
   const closeModal = () => {
-    onClose(); // Call the onClose function passed from the parent component
+    onClose();
   };
 
   const openModal = () => {
@@ -16,13 +16,16 @@ function Modal({ imageUrl, onClose }) {
 
   return (
     <div className={styles.overlay} onClick={closeModal}>
-        <div className={styles.imgContainer} onClick={closeModal}>
+      <div className={styles.imgContainer} onClick={closeModal}>
         <img src={imageUrl} onClick={openModal} alt="Click to open" />
-        </div>
-       
-      
+      </div>
     </div>
   );
 }
+
+Modal.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired
+};
 
 export default Modal;

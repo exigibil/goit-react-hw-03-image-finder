@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SlMagnifier } from "react-icons/sl";
 import styles from "./searchBar.module.css";
+import PropTypes from "prop-types";
 
 function SearchBar({ onSearch }) {
   const [searchItem, setSearchItem] = useState("");
@@ -29,5 +30,9 @@ function SearchBar({ onSearch }) {
     </div>
   );
 }
+
+SearchBar.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+};
 
 export default SearchBar;

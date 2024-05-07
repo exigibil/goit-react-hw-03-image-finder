@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import styles from '../ImageGalleryItem/ImageGalleryItem.module.css';
-import Modal from '../Modal/Modal';
+import { useState } from "react";
+import styles from "../ImageGalleryItem/ImageGalleryItem.module.css";
+import PropTypes from "prop-types";
+import Modal from "../Modal/Modal";
 
 function ImageGalleryItem({ image }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -19,13 +20,18 @@ function ImageGalleryItem({ image }) {
         className={styles.imageGalleryImg}
         src={image.largeImageURL}
         alt={image.tags}
-        onClick={openModal} // Call openModal when image is clicked
+        onClick={openModal} 
       />
-      {modalOpen && ( // Render the Modal component when modalOpen is true
+      {modalOpen && ( 
         <Modal imageUrl={image.largeImageURL} onClose={closeModal} />
       )}
     </li>
   );
 }
+
+ImageGalleryItem.propTypes = {
+  image: PropTypes.object.isRequired,
+};
+
 
 export default ImageGalleryItem;
