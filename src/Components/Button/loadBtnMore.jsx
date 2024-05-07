@@ -1,4 +1,4 @@
-import styles from "../Button/loadBtnMore.module.css";
+import styles from "../Button/Button.module.css";
 import PropTypes from "prop-types";
 
 function LoadBtnMore({ onClick, children }) {
