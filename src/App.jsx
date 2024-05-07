@@ -2,15 +2,15 @@ import { useState, useEffect} from "react";
 import SearchBar from "../src/Components/SearchBar/SearchBar";
 import getImages from "../src/Components/GetImgAPI/getImages";
 import ImageGallery from "./Components/ImageGallery/ImageGallery";
-
+import LoadBtnMore from "./Components/Button/LoadBtnMore";
 import styles from "./App.module.css";
-
+import Loader from "./Components/Loader/Loader";
 
 function App() {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
- 
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
    
@@ -39,7 +39,9 @@ function App() {
     }
   };
 
-  
+  const handleLoadMore = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
 
   const handleSearchInput = (searchInput) => {
     setSearchTerm(searchInput);
@@ -52,7 +54,10 @@ function App() {
 
       <ImageGallery images={images} />
       <div className={styles.btnContainer}>
-     
+      {loading && <Loader />}
+      {searchTerm.trim() !== "" && !loading &&  (
+          <LoadBtnMore onClick={handleLoadMore} />
+        )}
       
       </div>
     </div>
