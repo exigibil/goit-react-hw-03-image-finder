@@ -3,7 +3,8 @@
 
 .imageGalleryContainer {
     padding: 30px;
-  
+    overflow: auto;
+
     .imageGallery {
       display: grid;
       max-width: calc(100vw - 48px);
@@ -15,8 +16,7 @@
       list-style: none;
       margin-left: auto;
       margin-right: auto;
-  
-      
+     
     }
   }
 
