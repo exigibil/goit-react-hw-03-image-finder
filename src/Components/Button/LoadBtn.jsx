@@ -1,7 +1,7 @@
-import styles from "../Button/LoadBtnMore.module.css";
+import styles from "../Button/LoadBtn.module.css";
 import PropTypes from "prop-types";
 
-function LoadBtnMore({ onClick, children }) {
+function LoadBtn({ onClick, children }) {
   children = children || "Load more";
   return (
     <button className={styles.Button} onClick={onClick}>
@@ -10,9 +10,9 @@ function LoadBtnMore({ onClick, children }) {
   );
 }
 
-LoadBtnMore.propTypes = {
+LoadBtn.propTypes = {
   onClick: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 };
 
-export default LoadBtnMore;
+export default LoadBtn;

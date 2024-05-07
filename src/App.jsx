@@ -2,7 +2,7 @@ import { useState, useEffect} from "react";
 import SearchBar from "../src/Components/SearchBar/SearchBar";
 import getImages from "../src/Components/GetImgAPI/getImages";
 import ImageGallery from "./Components/ImageGallery/ImageGallery";
-import LoadBtnMore from "./Components/Button/LoadBtnMore";
+import LoadBtn from "./Components/Button/LoadBtn";
 import styles from "./App.module.css";
 import Loader from "./Components/Loader/Loader";
 
@@ -56,7 +56,7 @@ function App() {
       <div className={styles.btnContainer}>
       {loading && <Loader />}
       {searchTerm.trim() !== "" && !loading &&  (
-          <LoadBtnMore onClick={handleLoadMore} />
+          <LoadBtn onClick={handleLoadMore} />
         )}
       
       </div>
