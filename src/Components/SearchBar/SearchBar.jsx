@@ -13,20 +13,22 @@ function SearchBar({ onSearch }) {
   return (
     <div className={styles.searchBar}>
       <div className={styles.appName}>
-        <h2>AEM Search IMG APP</h2>
+        AEM Search IMG APP
       </div>
-      <form className={styles.searchBarContainer} onSubmit={handleSubmit}>
-        <button type="submit" className={styles.button}>
-          <SlMagnifier className={styles.searchIcon} />
-        </button>
-        <input
-          type="text"
-          className={styles.searchBarInput}
-          placeholder="Search for an image..."
-          value={searchItem}
-          onChange={(e) => setSearchItem(e.target.value)}
-        />
-      </form>
+      <div className={styles.searchBarContainer}>
+        <form className={styles.searchBarForm} onSubmit={handleSubmit}>
+          <button type="submit" className={styles.button}>
+            <SlMagnifier className={styles.searchIcon} />
+          </button>
+          <input
+            type="text"
+            className={styles.searchBarInput}
+            placeholder="Search for an image..."
+            value={searchItem}
+            onChange={(e) => setSearchItem(e.target.value)}
+          />
+        </form>
+      </div>
     </div>
   );
 }
